@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chronoline — Stopwatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="eyebrow">Task 02 · SkillCraft Technology</div>
+    <h1>Chronoline Stopwatch</h1>
+  </div>
+
+  <div class="dial-wrap">
+    <svg class="dial" viewBox="0 0 200 200">
+      <!-- tick marks, 60 total, every 5th major -->
+      <g id="ticks"></g>
+      <circle class="dial-track" cx="100" cy="100" r="90" />
+      <circle id="dialProgress" class="dial-progress" cx="100" cy="100" r="90" />
+    </svg>
+    <div class="dial-center">
+      <div class="time">
+        <span id="minutes">00</span><span>:</span><span id="seconds">00</span><span class="ms" id="millis">.00</span>
+      </div>
+      <div class="status" id="status"><span class="dot"></span><span id="statusText">Ready</span></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn-teal" id="lapBtn" disabled>Lap</button>
+    <button class="btn-primary" id="startBtn">Start</button>
+    <button class="btn-ghost" id="resetBtn" disabled>Reset</button>
+  </div>
+
+  <div class="laps-panel">
+    <div class="laps-head">
+      <span>Lap</span>
+      <span>Split</span>
+    </div>
+    <ul class="laps-list" id="lapsList">
+      <li class="laps-empty" id="lapsEmpty">Laps you record will appear here</li>
+    </ul>
+  </div>
+
+  <footer>Built for SkillCraft Technology Internship — Task 02</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
